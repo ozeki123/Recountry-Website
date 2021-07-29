@@ -1,0 +1,38 @@
+.nav-container{
+    margin: 1rem 0;
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0;
+
+        li{
+            list-style: none;
+            font-size: 14px;
+            
+            .nav-link{
+                text-decoration: none;
+                color: black;
+            }
+        }
+
+        .nav-left{
+            display: flex;
+            flex-direction: row;
+
+            li{
+                margin: 0 35% 0 0;
+            }
+        }
+
+        .nav-right{
+            li{
+                // border: 1px solid black;
+                // padding: 1rem;
+            }
+        }
+
+        
+}
+
+}
