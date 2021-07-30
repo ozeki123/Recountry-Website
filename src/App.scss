@@ -1,6 +1,21 @@
+@font-face {
+    font-family: 'Ogg';
+    src: url('../src/assets/fonts/Ogg-Roman.otf');
+}
+
+@font-face{
+    font-family: 'mplus-reg';
+    src: url('../src/assets/fonts/Mplus1-Regular.ttf');
+    format: 'truetype'
+}
+
+@font-face{
+    font-family: 'mplus-med';
+    src: url('../src/assets/fonts/Mplus1-Medium.ttf');
+    format: 'truetype'
+}
+
 .App{
     height: 100vh;
     width: 100vw;
-    overflow: hidden;
-    
 }
