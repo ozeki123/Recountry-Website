@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from  'react';
-import { gsap, Power3 } from 'gsap';
+import { gsap, Power4 } from 'gsap';
 
 import Navbar from '../Navbar/Navbar';
 import './Home.scss';
@@ -9,8 +9,6 @@ const Home = () => {
 
     let textContainer = []
 
-    // const textFirst = primaryTextSecond.children[0].children[0]
-
     let tl = gsap.timeline()
 
         useEffect(() => {
@@ -19,10 +17,10 @@ const Home = () => {
 
             tl.from(textContainer, {
                 duration: 1,
-                y: 50,
+                y: 150,
+                skewY: 5,
                 stagger: 0.3,
-                ease: Power3.easeOut,
-                opacity: 0,
+                ease: "back.out(0.95)"
             })
 
         })
@@ -32,14 +30,17 @@ const Home = () => {
             <div className="home-contents">
                 <Navbar/>
                 <div className="home-banner">
-                    <div className="text"  ref={(text) => textContainer.push(text)}>
-                        <p>田舎を、次のステージへ</p>
+                    <div className="text-one" id="row-one">
+                        <h1 ref={(text) => textContainer.push(text)}>田舎を、次のステージへ</h1>
                     </div>
-                    <div className="text">
-                        <h1 className="primary" ref={(primary) => textContainer.push(primary)}>Infusing modernity</h1>
-                        <h1 className="primary" ref={(primary) => textContainer.push(primary)}>with countryside</h1>
+                    <div className="text-two" id="primary">
+                        <h1 ref={(text) => textContainer.push(text)}>Infusing modernity</h1>
+                    </div>
+                    <div className="text-three" id="primary">
+                        <h1 ref={(text) => textContainer.push(text)}>with countryside</h1>
                     </div>
                 </div>
+                
             </div>
         </div>
     )
