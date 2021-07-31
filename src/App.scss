@@ -1,18 +1,41 @@
-@font-face {
+@font-face{
+    font-family: sfpro-reg;
+    src:url(../assets/fonts/SFProText-Regular.ttf);
+}
+
+@font-face{
+    font-family: sfpro-semi;
+    src:url(../assets/fonts/SFProDisplay-SemiBold.ttf);
+}
+
+@font-face{
+    font-family: sfpro-thin;
+    src:url(../assets/fonts/SFProDisplay-Thin.ttf);
+}
+
+@font-face{
+    font-family: sfpro-ultra;
+    src:url(../assets/fonts/SFProDisplay-UltraLight.ttf);
+}
+
+@font-face{
+    font-family: sfpro-med;
+    src:url(../assets/fonts/SFProText-Medium.ttf);
+}
+
+@font-face{
+    font-family: sfpro-bold;
+    src:url(../assets/fonts/SFProDisplay-Bold.ttf);
+}
+
+@font-face{
+    font-family: sfpro-black;
+    src:url(../assets/fonts/SFProDisplay-Black.ttf);
+}
+
+@font-face{
     font-family: 'Ogg';
-    src: url('../src/assets/fonts/Ogg-Roman.otf');
-}
-
-@font-face{
-    font-family: 'mplus-reg';
-    src: url('../src/assets/fonts/Mplus1-Regular.ttf');
-    format: 'truetype'
-}
-
-@font-face{
-    font-family: 'mplus-med';
-    src: url('../src/assets/fonts/Mplus1-Medium.ttf');
-    format: 'truetype'
+    src:url('../assets/fonts/Ogg-Roman.otf');
 }
 
 .App{

@@ -1,10 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300&display=swap');
+
+@font-face{
+    font-family: 'sfpro-light';
+    src: url('../../assets/fonts/SFProText-Light.ttf');
+}
+
+@font-face{
+    font-family: sfpro-reg;
+    src:url(../../assets/fonts/SFProText-Regular.ttf);
+}
+
+@font-face{
+    font-family: sfpro-semi;
+    src:url(../../assets/fonts/SFProDisplay-SemiBold.ttf);
+}
+
 .nav-container{
-    margin: 1rem 0;
+    margin: 2.5rem 0;
     ul{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         padding: 0;
+        font-family: 'sfpro-light';
 
         li{
             list-style: none;
@@ -12,8 +30,18 @@
             
             .nav-link{
                 text-decoration: none;
-                color: black;
+                color: white;
+                font-size: 17px;            
             }
+
+            #logo-text{
+                font-size: 1.5rem;
+                position: relative;
+                bottom: 5px;
+                font-family: 'sfpro-semi'
+                
+            }
+            
         }
 
         .nav-left{
@@ -26,12 +54,25 @@
         }
 
         .nav-right{
-            li{
-                // border: 1px solid black;
-                // padding: 1rem;
+            outline: 1px solid white;
+            height: 40px;
+            width: 160px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            bottom: 5px;
+            
+
+            .nav-link{
+                font-size: 15px;
+                font-family: "Noto Sans JP", sans-serif;
+                font-weight: 100;
+                position: relative;
+                bottom: 2px;
             }
         }
-
         
 }
 

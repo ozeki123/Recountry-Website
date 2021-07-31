@@ -7,9 +7,9 @@ const Navbar = () => {
         <div className="nav-container">
             <ul>
                 <div className="nav-left">
-                    <li><Link className="nav-link" to="/">Recountry</Link></li>
+                    <li><Link className="nav-link" id="logo-text" to="/">RECOUNTRY</Link></li>
                     <li><Link className="nav-link" to="/">Home</Link></li>
-                    <li>About</li>
+                    <li><Link className="nav-link" to="/">About</Link></li>
                 </div>
                 <div className="nav-right">
                     <li><Link className="nav-link" to="/">お問い合わせ</Link></li>
