@@ -9,9 +9,10 @@
 .home-container{
     width: 100%;
     height: 100vh;
-    background: url('../../assets/images/home.jpg') no-repeat center center fixed;
+    background: url('../../assets/images/recountry-bg.jpg') no-repeat center center fixed;
     background-size: cover;
     display: flex;
+    background-attachment: scroll;
 
     .home-contents{
         width: 90%;
