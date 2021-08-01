@@ -65,7 +65,7 @@
 
         .about-left{
             z-index: 9999;
-            height: 39vh;
+            height: 35vh;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -133,7 +133,7 @@
                 p{
                     font-family: 'Noto Sans JP', sans-serif;
                     font-weight: 100;
-                    line-height: 1;
+                    line-height: 0;
                     letter-spacing: 1px;
                     font-size: 17px;
                     // position: absolute;
@@ -172,13 +172,24 @@
                 content: '';
                 position: absolute;
                 width: 100%;
-                height: 105%;
+                height: 100%;
                 top: 0;
                 right: 0;
                 background: linear-gradient(180deg, #161a03, rgb(12, 12, 12));
                 z-index: 2;
+                
 
                 // visibility: hidden;
+            }
+
+            .about-image{
+                width: 100%;
+                height: 100%;
+                transition: .3s ease-in-out;
+
+                &:hover{
+                    transform: scale(1.05);
+                }
             }
             
             img{
@@ -187,7 +198,7 @@
                 height: 100%;
                 width: 690px;
                 z-index: 1;
-
+                overflow: hidden;
                 
             }
         }
