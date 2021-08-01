@@ -37,6 +37,9 @@
     width: 100vw;
     background: linear-gradient(180deg, #191d00, rgb(12, 12, 12));
     overflow: hidden;
+    position: relative;
+    visibility: hidden;
+    
 
     .about-header{
         position: relative;
@@ -54,7 +57,7 @@
 
     .about-contents{
         width: 100%;
-        height: 60vh;
+        height: 55%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -160,11 +163,32 @@
         }
 
         .about-right{
+            width: 700px;
+            height: 820px;
+            position: relative;
+            overflow: hidden;
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 105%;
+                top: 0;
+                right: 0;
+                background: linear-gradient(180deg, #161a03, rgb(12, 12, 12));
+                z-index: 2;
+
+                // visibility: hidden;
+            }
+            
             img{
-                position: relative;
+                position: absolute;
                 right: 2rem;
-                height: 750px;
+                height: 100%;
+                width: 690px;
                 z-index: 1;
+
+                
             }
         }
     }

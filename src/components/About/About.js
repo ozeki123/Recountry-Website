@@ -1,31 +1,49 @@
 import React, { useRef, useEffect } from  'react';
-import { gsap, Power4 } from 'gsap';
+import { gsap, Power2, Power4 } from 'gsap';
 import './About.scss'
 import modernHouse from '../../assets/images/modern-house.jpg';
+import CSSRulePlugin from 'gsap/CSSRulePlugin';
+
+gsap.registerPlugin(CSSRulePlugin)
 
 const About = () => {
     let elContainer = [];
-
+    let imageRef = useRef(null);
+    let imageContainer = [];
+    let aboutContainer = useRef(null);
+    let imageReveal = CSSRulePlugin.getRule(".about-container .about-contents .about-right:after")
+    
     let tl = gsap.timeline();
 
         useEffect(() => {
-            console.log(elContainer)
+            tl.to(aboutContainer, {
+                duration: 0.1,
+                css:  {visibility: "visible" }
+            }).to(imageReveal, {
+                    duration: 1.7,
+                    width: "0%",
+                    ease: Power2.easeOut,
+                }).from(imageRef, {
+                    duration: 1.7,
+                    scale: 1.3,
+                    ease: Power2.easeOut,
+                    delay: -2
+                })
 
             tl.from(elContainer, {
                 duration: 1,
-                delay: 0.5,
                 y: 120,
                 stagger: 0.1,
                 ease: Power4.easeOut
-            })
+            });
+
         })
     return (
-        <div className="about-container">
+        <div className="about-container" ref={el => (aboutContainer = el)}>
             <div className="about-header">
                 <h1 ref={(item) => elContainer.push(item)}>About</h1>
             </div>
             <div className="about-contents">
-                
                 <div className="about-left">
                     <div className="about-title">
                         <div className="rectangle-area">
@@ -64,7 +82,7 @@ const About = () => {
                     
                 </div>
                 <div className="about-right">
-                    <img src={modernHouse}/>
+                    <img src={modernHouse} ref={el => imageRef = el} alt="a"/>
                 </div>
             </div>
         </div>
